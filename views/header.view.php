@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Watchmen</title>
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400|Cinzel+Decorative:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300|Roboto+Slab:200|Cinzel+Decorative:700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<header>
@@ -15,10 +15,8 @@
 
 		</div>
 		<div class="login">
-			<ul>
-				<li><a href="">Login/Register</a></li>
-				<li><a href="">Contact us</a></li>
-			</ul>
+				<a href="">Login/Register</a>
+				<a href="">Contact us</a>
 		</div>
 	</header>
 	<div class="nav">
