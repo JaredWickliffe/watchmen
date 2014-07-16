@@ -1,5 +1,5 @@
 <?php
-
+require_once '../libraries/form.class.php';
 
 include '../views/header.view.php';
 include '../views/login.view.php';

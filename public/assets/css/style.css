@@ -29,7 +29,26 @@ h1, h2, h3{
 	font-weight: 200;
 }
 .label h1{ margin: 0 0 0 2em;}
+
+
+
+.row{
+	display: block;
+	margin: 8%;
+}
+input[type="text"]{
+	margin-left: 20px;
+	float: right;
+	display: inline-block;
+}
+
+
+
+
+
+
 /*------------------------------ Header */
+
 header{
 	max-width: 100%;
 	height: 12.5em;
@@ -100,7 +119,7 @@ footer{
 	margin-top: 1em;
 	padding: 3em 1em;
 }
-/*------------------------------ End footer */
+/*---------------------- End footer */
 
 .container{
 	width: 60%;
@@ -169,7 +188,7 @@ footer{
 	margin: 0;
 	padding: .2em .5em;
 }
-/*------------------------------ Index End */
+/*---------------------- Index End */
 
 /*------------------------------ Products */
 
@@ -187,8 +206,7 @@ footer{
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
-/*------------------------------ Products End */
-
+/*---------------------- Products End */
 
 /*------------------------------ Product */
 
@@ -227,8 +245,7 @@ footer{
 	height: 5em;
 	background: #000;
 }
-/*------------------------------ Product End */
-
+/*----------------------- Product End */
 
 /*------------------------------ Login/register */
 
@@ -250,8 +267,7 @@ footer{
 .signIn{
 	margin-right: 1em;
 }
-/*------------------------------ Login End */
-
+/*----------------------- Login End */
 
 /*------------------------------ Contact */
 
@@ -259,3 +275,18 @@ footer{
 	width: 100%;
 	background: #ccc;
 }
+
+
+
+
+
+
+
+/*----------------------- Contact End */
+
+
+/*---- ---- ---- ---- ---- ---- ---- ---- ---- Admin Pages */
+
+
+/*------------------------------ A-Home */
+

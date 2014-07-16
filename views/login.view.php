@@ -2,19 +2,30 @@
 
 	<div class="box signIn">
 		<div class="label"><h1>Login</h1></div>
-		<div class="username">Username:</div>
-		<input type="text">
-		<div class="password">Password:</div>
-		<input type="text">
-		<input type="submit">
+		<div class="row">
+			<?=Form::label('username', 'Username:')?>
+			<?=Form::input('text', 'username')?>
+		
+			<?=Form::label('password', 'Password:')?>
+			<?=Form::input('text', 'password')?>
+		</div>
+		<div class="row">
+			<?=Form::submit()?>
+		</div>
 	</div>
 
 	<div class="box register">
 		<div class="label"><h1>Register</h1></div>
-		<div class="username">Username:</div>
-		<input type="text">
-		<div class="password">Password:</div>
-		<input type="text">
-		<input type="submit">
+		<div class="row">
+			<?=Form::label('username', 'Username:')?>
+			<?=Form::input('text', 'username')?>
+		</div>
+		<div class="row">
+			<?=Form::label('password', 'Password:')?>
+			<?=Form::input('text', 'password')?>
+		</div>
+		<div class="row">
+			<?=Form::submit()?>
+		</div>
 	</div>
 </div>
