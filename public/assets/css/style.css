@@ -28,6 +28,7 @@ h1, h2, h3{
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 200;
 }
+.label h1{ margin: 0 0 0 2em;}
 /*------------------------------ Header */
 header{
 	max-width: 100%;
@@ -102,7 +103,7 @@ footer{
 /*------------------------------ End footer */
 
 .container{
-	max-width: 60%;
+	width: 60%;
 	float: left;
 }
 /*------------------------------ Index */
@@ -140,6 +141,7 @@ footer{
 	height: 3em;
 	background: rgba(0, 0, 0, .8);
 	float: left;
+	color: #fff;
 }
 .label h2{
 	margin: 0;
@@ -192,11 +194,10 @@ footer{
 
 .product{
 	max-width: 50%;
-	background: #ccc;
+	background: #fff;
 	margin: 3em 0 0 1em;
 }
 .heading h1{
-	margin: 0;
 	padding-left: 1em;
 }
 .heading{
@@ -229,19 +230,32 @@ footer{
 /*------------------------------ Product End */
 
 
-/*------------------------------ login/register */
+/*------------------------------ Login/register */
 
 .login_box{
-	width: 100%;
-	float: left;
-	margin: 3em 1em;
+	background: #ccc;
 }
 
 .box{
 	width: 48%;
 	height: 16em;
-	margin: 0 1em;
+	margin-top: 2em;
 	float: left;
-	display: inline-block;
 	background: #fff;
+	color: #000;
+}
+.box h1{
+	margin:0 0 0 2em;
+}
+.signIn{
+	margin-right: 1em;
+}
+/*------------------------------ Login End */
+
+
+/*------------------------------ Contact */
+
+.contact{
+	width: 100%;
+	background: #ccc;
 }
