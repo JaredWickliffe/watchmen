@@ -37,7 +37,7 @@ class User extends Model{
 					'password'	=> Hash::make_password($this->password),
 					'salt'		=> Hash::salt()
 				))
-				->insert('tb_customers');
+				->insert('tb_users');
 		}else{
 			$success = $this->db
 				->set(array(
@@ -46,7 +46,7 @@ class User extends Model{
 					'salt'		=> Hash::salt()
 				))
 				->where('id', $this->id)
-				->update('tb_customers');
+				->update('tb_users');
 		}
 
 		return $success;

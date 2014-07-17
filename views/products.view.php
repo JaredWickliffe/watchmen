@@ -1,23 +1,19 @@
 <div class="options">
 	
-	<div class="products">
-		<div class="label"><h2>This is a watch.</h2></div>
-
-	</div>
-
-	<div class="products">
-		<div class="label"><h2>This is a watch.</h2></div>
-
-	</div>
-
-	<div class="products">
-		<div class="label"><h2>This is a watch.</h2></div>
-
-	</div>
 	
-	<div class="products">
-		<div class="label"><h2>This is a watch.</h2></div>
-
-	</div>
+		<?php foreach ($products->items as $product): ?>
+		<div class="products">
+			<div class="label"><h3><?=$product['name']?></h3></div>
+			<img src="assets/img/uploads/<?=$product['image']?>">
+			<p><?=$product['description']?></p>
+			<div class="row">$<?=$product['price']?></div>
+			<div class="buy">
+				<?=Form::open('add_to_cart.php')?>						
+						<?=Form::submit('Add to cart')?>
+				<?=Form::close()?>
+			</div>
+		</div>
+		<?php endforeach; ?>
+	
 
 </div>

@@ -31,7 +31,6 @@ class Product_collection{
 		$this->featured = $this->db
 			->select('*')
 			->from('tb_products')
-			->where('featured', '1')
 			->where_and('deleted', '0')
 			->get();
 	}

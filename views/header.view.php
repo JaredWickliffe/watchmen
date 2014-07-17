@@ -11,9 +11,6 @@
 		<div class="title">
 			<h1><a href="index.php">Watchmen</a></h1>
 		</div>
-		<div class="logo">
-
-		</div>
 		<div class="login">
 				<a href="login.php">Login/Register</a>
 				<a href="contact.php">Contact us</a>
@@ -22,10 +19,15 @@
 	<div class="nav">
 		<ul>
 			<h2>Catagories</h2>
-			<li><a href="products.php">All products</a></li>
-			<li><a href="#">luxary</a></li>
-			<li><a href="#">Sports</a></li>
-			<li><a href="#">Kids</a></li>
+			<li><a href="products.php">ALL PRODUCTS</a></li>
+			<?php foreach ($categories->items as $category): ?>
+				<li>
+					<a href="products.php?id=<?=$category['id']?>">
+						<?=ucwords($category['name'])?>
+					</a>
+				</li>
+			<?php endforeach; ?>
+		
 		</ul>
 	</div>
 	<div class="container">

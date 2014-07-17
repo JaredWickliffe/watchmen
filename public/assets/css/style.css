@@ -41,7 +41,14 @@ input[type="text"]{
 	float: right;
 	display: inline-block;
 }
-
+input[type="number"]{
+	color: #000;
+}
+input[type="submit"]{
+	font-weight: 300;
+	margin: 1em ;
+	color: #000;
+}
 
 
 
@@ -53,7 +60,7 @@ header{
 	max-width: 100%;
 	height: 12.5em;
 	background: rgba(40, 40, 40, .5);
-	padding: .5em 1em;
+	padding: .5em 2em;
 }
 .title {
 	display: inline-block;
@@ -63,6 +70,11 @@ header{
 .title h1{
 	font-family: 'Cinzel Decorative';
 	font-weight: 700;
+}
+.title h1:hover{
+	color: #BF7D00;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
 }
 .logo{
 	width: 10em;
@@ -174,24 +186,26 @@ footer{
 	background-repeat: no-repeat;
 	margin: 0 auto;
 }
-.discription{
+.description{
 	width: 100%;
 	height: 5em;
 	background: rgba(0, 0, 0, .8);
 	overflow: auto;
-
+	color: white;
 	position: relative;
 	bottom: 5em;
 	left: 0;
 }
-.discription p{
+.description p{
 	margin: 0;
 	padding: .2em .5em;
 }
 /*---------------------- Index End */
 
 /*------------------------------ Products */
-
+.label h3{
+	margin: .6em 1em;
+}
 .options{
 	width: 100%;
 	margin-top: 2em;
@@ -199,13 +213,15 @@ footer{
 }
 .products{
 	width: 30%;
-	height: 14em;
 	margin: 1%;
-	float: left;
-	background-image: url('../img/watch1.jpg');
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background: #ccc;
+	display: inline-block;
 }
+.products img{
+	width: 80%;
+	margin: 0 10%;
+}
+
 /*---------------------- Products End */
 
 /*------------------------------ Product */
@@ -242,8 +258,7 @@ footer{
 }
 .buy{
 	width: 100%;
-	height: 5em;
-	background: #000;
+	background: #444;
 }
 /*----------------------- Product End */
 

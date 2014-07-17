@@ -44,15 +44,10 @@ class Product{
 		$this->db
 			->set(array(
 				'name'        => $this->name,
-				'deleted'     => $this->deleted,
+				'image'       => $this->image,
 				'description' => $this->description,
 				'price'       => $this->price,
-				'mass'        => $this->mass,
-				'image'       => $this->image,
-				'featured'	  => $this->featured,
-				'thumb'	      => $this->thumb,
-				'xpos'        => $this->xpos,
-				'ypos'        => $this->ypos,
+				'deleted'     => $this->deleted,
 				'category_id' => $this->category_id
 			))
 			->insert('tb_products');
@@ -64,15 +59,10 @@ class Product{
 			$this->db
 				->set(array(
 				'name'        => $this->name,
-				'deleted'     => $this->deleted,
+				'image'       => $this->image,
 				'description' => $this->description,
 				'price'       => $this->price,
-				'mass'        => $this->mass,
-				'image'       => $this->image,
-				'featured'	  => $this->featured,
-				'thumb'	      => $this->thumb,
-				'xpos'        => $this->xpos,
-				'ypos'        => $this->ypos,
+				'deleted'     => $this->deleted,
 				'category_id' => $this->category_id
 			))
 				->where('id', $this->id)

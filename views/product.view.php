@@ -1,5 +1,5 @@
 <div class="product">
-	<div class="heading"><h1>The watch you want.</h1></div>
+	<div class="heading"><h1></h1></div>
 	<div class="product_pic"></div>
 
 	<div class="description">
