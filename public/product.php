@@ -6,10 +6,8 @@ require_once '../libraries/cart.class.php';
 require_once '../libraries/collection.class.php';
 require_once '../models/product.model.php';
 
-
 $categories= new Collection('tb_categories');
 $product = new Product($_GET['id']);
-
 
 
 include '../views/header.view.php';

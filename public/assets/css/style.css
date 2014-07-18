@@ -70,6 +70,9 @@ header{
 .title h1{
 	font-family: 'Cinzel Decorative';
 	font-weight: 700;
+	font-size: 2.5em;
+	margin: .6em .2em;
+	display: inline-block;
 }
 .title h1:hover{
 	color: #BF7D00;
@@ -211,6 +214,9 @@ footer{
 	margin-top: 2em;
 	display: inline-block;
 }
+.products p{
+
+}
 .products{
 	width: 30%;
 	margin: 1%;
@@ -218,8 +224,7 @@ footer{
 	display: inline-block;
 }
 .products img{
-	width: 80%;
-	margin: 0 10%;
+	width: 100%;
 }
 
 /*---------------------- Products End */

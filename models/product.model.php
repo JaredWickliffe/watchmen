@@ -4,9 +4,9 @@ require_once'../libraries/config.class.php';
 
 class Product{
 
-	private $properties = array();
 	private $db;
-	public $table = 'tb_products';
+	private $properties = array();
+	public  $table 		= 'tb_products';
 
 	public function __construct($id = false){
 		$this->db= new Database(
@@ -48,7 +48,8 @@ class Product{
 				'description' => $this->description,
 				'price'       => $this->price,
 				'deleted'     => $this->deleted,
-				'category_id' => $this->category_id
+				'category_id' => $this->category_id,
+				'featured'	  => $this->featured
 			))
 			->insert('tb_products');
 	}
@@ -63,7 +64,8 @@ class Product{
 				'description' => $this->description,
 				'price'       => $this->price,
 				'deleted'     => $this->deleted,
-				'category_id' => $this->category_id
+				'category_id' => $this->category_id,
+				'featured'	  => $this->featured
 			))
 				->where('id', $this->id)
 				->update('tb_products');
