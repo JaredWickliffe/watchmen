@@ -1,15 +1,17 @@
 <div class="product">
 
-	<h1><?=$product->name?></h1>
+	<div class="label">
+		<h1><?=ucwords($product->name)?></h1>
+	</div>
 
 	<img src="assets/img/uploads/<?=$product->image?>">
 	
-	<div class="info">
+	<div class="description">
 		<p><?=$product->description?></p>
 
 		<p class="price">$<?=$product->price?></p>
 
-		<?=Form::open('add_to_cart.php')?>
+		<?=Form::open()?>
 			<div class="row">								
 				<?=Form::submit('Add to cart')?>			
 			</div>

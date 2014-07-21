@@ -20,9 +20,16 @@
 		<ul>
 			<h2>Catagories</h2>
 			<li><a href="products.php">ALL PRODUCTS</a></li>
-			<?php foreach ($categories->items as $category): ?>
-				<li><a href="products.php?id=<?=$category['id']?>"><?=ucwords($category['name'])?></a></li>
+			<?php foreach ($categories->items as $cat): ?>
+				<li>
+					<a href="admin_products.php?id=<?=$cat['id']?>"><?=ucwords($cat['name'])?></a>
+				</li>
 			<?php endforeach; ?>
+		<?=Form::open()?>
+			<?=Form::input('text', 'new_name')?>
+			<br>
+			<?=Form::submit('Add Category')?>
+		<?=Form::close()?>
 		
 		</ul>
 	</div>

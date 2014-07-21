@@ -3,14 +3,16 @@
 	
 		<?php foreach ($products->items as $product): ?>
 		<div class="products">
-			<div class="label"><h3><?=$product['name']?></h3></div>
-
-			<div class="pic">
-				<img src="assets/img/uploads/<?=$product['image']?>">
-			</div>
+			<div class="label"><a href="product.php?id=<?=$product['id']?>">
+				<h3><?=strtoupper($product['name'])?></h3>
+			</a></div>
+			
+			<a href="product.php?id=<?=$product['id']?>">
+				<img src="assets/img/uploads/<?=$product['image']?>" alt="">
+			</a>
 
 			<p>
-				<hr>
+			<hr>
 				<?=$product['description']?>
 			</p>
 
