@@ -5,8 +5,10 @@ require_once '../libraries/config.class.php';
 require_once '../libraries/form.class.php';
 require_once '../libraries/model.class.php';
 require_once '../libraries/cart.class.php';
+require_once '../libraries/collection.class.php';
 require_once '../models/product.model.php';
 
+$categories= new Collection('tb_categories');
 
 $cart_products= array();
 $grand_total= 0;
@@ -16,11 +18,8 @@ foreach($_SESSION['cart'] as $id => $amount){
 
 	$product->load($id);
 
-	$grand_total += $total_price;
-
 	$cart_products[] = array(
 		'image'      =>$product->image,
-		'total_price'=>$total_price,
 		'price'		 =>$product->price,
 		'name'		 =>$product->name,
 		'id'		 =>$product->id

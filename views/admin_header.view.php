@@ -19,7 +19,7 @@
 	<div class="nav">
 		<ul>
 			<h2>Catagories</h2>
-			<li><a href="products.php">ALL PRODUCTS</a></li>
+			<li><a href="admin_products.php">ALL PRODUCTS</a></li>
 			<?php foreach ($categories->items as $cat): ?>
 				<li>
 					<a href="admin_products.php?id=<?=$cat['id']?>"><?=ucwords($cat['name'])?></a>

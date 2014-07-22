@@ -40,8 +40,8 @@ class Login{
 	}
 
 	public static function sign_in(){
-		$user  = new User('tb_customers');
-		$admin = new User('tb_admins');
+		$user  = new User('tb_users');
+		$admin = new User('tb_admin');
 
 		$user->username=$_POST['signin_username'];
 		$user->password=$_POST['signin_password'];
@@ -61,14 +61,14 @@ class Login{
 	}
 
 	public static function register(){
-		$user = new User('tb_customers');
+		$user = new User('tb_users');
 
-		if($_POST['register_password'] == $_POST['register_confirm_password'] && strlen($_POST['register_username']) >= 5 && strlen($_POST['register_password']) >= 5){
+		if( strlen($_POST['register_username']) >= 5 && strlen($_POST['register_password']) >= 5){
 
 			$user->username=$_POST['register_username'];
 			$user->password=$_POST['register_password'];
 
-			$user->user_save();
+			#$user->user_save();
 			if ($user->user_save()){
 				self::log_in('user');
 			}

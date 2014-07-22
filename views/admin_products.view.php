@@ -27,7 +27,7 @@
 		<div class="products">
 
 			<div class="label">
-				<h3><?=$product['name']?></h3>
+				<h3><?=strtoupper($product['name'])?></h3>
 			</div>
 
 			<img src="assets/img/uploads/<?=$product['image']?>" alt="">

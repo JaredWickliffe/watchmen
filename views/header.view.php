@@ -12,7 +12,21 @@
 			<h1><a href="index.php">Watchmen</a></h1>
 		</div>
 		<div class="login">
+			<?php if($_SESSION['logged_in_admin']): ?>
+
+				<a href="admin.php">Admin</a>
+
+			<?php endif; ?>			
+			<?php if($_SESSION['logged_in_admin'] || $_SESSION['logged_in_user']): ?>
+
+				<a href="cart.php">Cart(<?=Cart::get_total()?>)</a>
+				<a href="logout.php">Sign Out</a>
+
+			<?php else: ?>
+
 				<a href="login.php">Login/Register</a>
+			<?php endif; ?>
+
 				<a href="contact.php">Contact us</a>
 		</div>
 	</header>
