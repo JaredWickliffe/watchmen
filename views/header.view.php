@@ -17,7 +17,8 @@
 				<a href="admin.php">Admin</a>
 
 			<?php endif; ?>			
-			<?php if($_SESSION['logged_in_admin'] || $_SESSION['logged_in_user']): ?>
+			<?php if($_SESSION['logged_in_admin'] || 
+					 $_SESSION['logged_in_user']): ?>
 
 				<a href="cart.php">Cart(<?=Cart::get_total()?>)</a>
 				<a href="logout.php">Sign Out</a>
@@ -35,7 +36,10 @@
 			<h2>Catagories</h2>
 			<li><a href="products.php">ALL PRODUCTS</a></li>
 			<?php foreach ($categories->items as $category): ?>
-				<li><a href="products.php?id=<?=$category['id']?>"><?=ucwords($category['name'])?></a></li>
+				<li>
+					<a href="products.php?id=<?=$category['id']?>">
+					<?=ucwords($category['name'])?></a>
+				</li>
 			<?php endforeach; ?>
 		
 		</ul>

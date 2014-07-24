@@ -7,6 +7,7 @@ require_once '../libraries/cart.class.php';
 require_once '../libraries/collection.class.php';
 require_once '../models/category.model.php';
 
+Login::kickout();
 
 $categories= new Collection('tb_categories');
 

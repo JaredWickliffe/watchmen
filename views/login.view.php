@@ -26,9 +26,15 @@
 				<?=Form::input('text', 'register_username')?>
 			</div>
 			<div class="row">
-				<?=Form::label('register_password', 'Password:')?>
+				<?=Form::label('register_password', 'Password (min 5 characters): ')?>
 				<?=Form::input('password', 'register_password')?>
 			</div>
+
+			<div class="row">
+				<?=Form::label('register_confirm_password', 'Confirm Password: ')?>
+				<?=Form::input('password', 'register_confirm_password')?>
+			</div>
+			
 			<div class="row">
 				<?=Form::submit('Register')?>	
 			</div>

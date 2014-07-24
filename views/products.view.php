@@ -19,8 +19,9 @@
 			<div class="row">$<?=$product['price']?></div>
 
 			<div class="buy">
-				<?=Form::open('add_to_cart.php')?>						
-						<?=Form::submit('Add to cart')?>
+				<?=Form::open('add_to_cart.php')?>
+					<?=Form::input('number', 'amount', '1', 'min="1" max="10"')?>
+					<?=Form::submit('Add to cart')?>
 				<?=Form::close()?>
 			</div>
 		</div>

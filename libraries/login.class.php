@@ -56,19 +56,19 @@ class Login{
 		}else if($user->authenticate()){
 			self::log_in('user');
 		}else{
-			self::$error = 'Incorrect email or password';
+			self::$error = 'Incorrect Username or Password';
 		}
 	}
 
 	public static function register(){
 		$user = new User('tb_users');
 
-		if( strlen($_POST['register_username']) >= 5 && strlen($_POST['register_password']) >= 5){
+		if($_POST['register_password'] == $_POST['register_confirm_password'] && strlen($_POST['register_username']) >= 4 && strlen($_POST['register_password']) >= 4){
 
 			$user->username=$_POST['register_username'];
 			$user->password=$_POST['register_password'];
 
-			#$user->user_save();
+			$user->user_save();
 			if ($user->user_save()){
 				self::log_in('user');
 			}

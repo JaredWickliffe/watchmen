@@ -9,6 +9,7 @@ require_once '../libraries/collection.class.php';
 require_once '../models/product.model.php';
 require_once '../models/category.model.php';
 
+Login::kickout();
 
 $categories        = new Collection('tb_categories');
 $this_category     = new Category($_GET['category_id']);

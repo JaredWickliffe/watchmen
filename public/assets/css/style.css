@@ -36,30 +36,33 @@ h1, h2, h3{
 
 .row{
 	display: block;
-	margin: 8%;
+	margin: 2em;
 }
 input[type="text"]{
-	margin-left: 20px;
 	color: #000;
+	float: left;
 	display: inline-block;
 }
 input[type="number"]{
 	color: #000;
 }
+label{
+	display: block;
+}
 input[type="submit"]{
 	font-weight: 300;
 	background: #fff;
-	margin: 1em ;
+	margin: 0 ;
 	color: #000;
 	border:1px solid #333;
-	padding: .2em .6em;
+	padding: .3em .6em;
 }
 
 .edit_button{
 	color: #000;
 	background: #fff;
 	border:1px solid #333;
-	padding: .2em .6em;
+	padding: .2em .5em;
 	display: inline-block;
 }
 
@@ -276,7 +279,7 @@ footer{
 
 .box{
 	width: 48%;
-	height: 16em;
+	min-height: 16em;
 	margin-top: 2em;
 	float: left;
 	background: #fff;
