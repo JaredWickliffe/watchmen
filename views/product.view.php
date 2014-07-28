@@ -7,15 +7,24 @@
 	<img src="assets/img/uploads/<?=$product->image?>">
 	
 	<div class="description">
-		<p><?=$product->description?></p>
+		<div class="row">
+			<br>
+			<?=$product->description?>
+		</div>
 
-		<p class="price">$<?=$product->price?></p>
+		<div class="row">$<?=$product->price?></div>
 
-		<?=Form::open()?>
 			<div class="row">								
-				<?=Form::submit('Add to cart')?>			
+				<?php if(($_SESSION['logged_in_user'] || $_SESSION['logged_in_admin']) == true): ?>
+
+					<?=Form::open('add_to_cart.php')?>
+						<?=Form::input('number', 'amount', '1', 'min="1" max="10"')?>
+						<?=Form::submit('Add to cart')?>
+					<?=Form::close()?>
+				<?php else: ?>
+					<p>Please login to buy products.</p>
+				<?php endif; ?>			
 			</div>
-		<?=Form::close()?>
 		
 	</div>
 </div>

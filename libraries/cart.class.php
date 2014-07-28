@@ -11,14 +11,10 @@ class Cart{
 
 		if(isset($_SESSION['cart'][$id])){
 
-			$_SESSION['cart'][$id]+= intval($amount);
-			if ($_SESSION['cart'][$id] > 100){
-				
-				$_SESSION['cart'][$id] = 100;
-			}
+			$_SESSION['cart'][$id] += intval($amount);
 		}else{
 
-			$_SESSION['cart'][$id]= intval($amount);
+			$_SESSION['cart'][$id] = intval($amount);
 		}
 
 		
@@ -27,10 +23,10 @@ class Cart{
 	public static function get_total(){
 		self::create_cart();
 
-		$amount = 0;
+		$amount= 0;
 
 		foreach ($_SESSION['cart'] as $quantity) {
-			$amount += 1;
+			$amount += $quantity;
 		}
 		return $amount;
 	}

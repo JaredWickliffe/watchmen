@@ -36,7 +36,7 @@ h1, h2, h3{
 
 .row{
 	display: block;
-	margin: 2em;
+	padding: 0 1em 0.5em 1em;
 }
 input[type="text"]{
 	color: #000;
@@ -54,10 +54,12 @@ input[type="submit"]{
 	background: #fff;
 	margin: 0 ;
 	color: #000;
-	border:1px solid #333;
+	border:2px solid rgba(0, 0, 0, .0);
 	padding: .3em .6em;
 }
-
+input[type="submit"]:hover{
+	border:2px solid green;
+}
 .edit_button{
 	color: #000;
 	background: #fff;
@@ -137,6 +139,11 @@ header{
 .nav ul li a:hover{
 	font-size: 1.15em;
 }
+
+.container{
+	width: 60%;
+	float: left;
+}
 /*------------------------------ Footer */
 
 footer{
@@ -149,10 +156,7 @@ footer{
 }
 /*---------------------- End footer */
 
-.container{
-	width: 60%;
-	float: left;
-}
+
 /*------------------------------ Index */
 
 
@@ -186,8 +190,8 @@ footer{
 .label{
 	width: 100%;
 	height: 3em;
+	padding: 0.6em 1em;
 	background: rgba(0, 0, 0, .8);
-	float: left;
 	color: #fff;
 }
 .label h2{
@@ -205,7 +209,6 @@ footer{
 
 .description{
 	max-width: 100%;
-	height: 4em;
 	padding: 0 .5em;
 	background: rgba(0, 0, 0, .8);
 	overflow: auto;
@@ -220,21 +223,28 @@ footer{
 
 /*------------------------------ Products */
 .label h3{
-	margin: .6em 1em;
+	margin: 0;
 }
 .options{
 	width: 100%;
 	margin-top: 2em;
 	display: inline-block;
 }
-.products p{
-
+.buy{
+	width: 100%;
+	height: 60px;
+	padding: 0.5em 1em;
+	background: rgba(0, 0, 0, .8);
+	color: #fff;
 }
+
 .products{
 	width: 30%;
 	margin: 1%;
 	background: #ccc;
+	color: #333;
 	display: inline-block;
+
 }
 .products img{
 	width: 100%;
@@ -249,14 +259,10 @@ footer{
 	background: #fff;
 	margin: 3em 0 0 1em;
 }
-.heading h1{
-	padding-left: 1em;
-}
-.heading{
-	width: 100%;
-	float: left;
-	background: rgba(0, 0, 0, .8);
-}
+.product .label h1{	margin: 0;}
+
+.product .label{ padding: .2em 1em;}
+
 .product_pic{
 	max-width: 80%;
 	height: 16em;
@@ -265,16 +271,12 @@ footer{
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
-.buy{
-	width: 100%;
-	background: #444;
-}
 /*----------------------- Product End */
 
 /*------------------------------ Login/register */
 
-.login_box{
-	background: #ccc;
+.login_box .row{
+	margin: 1em 0;
 }
 
 .box{
@@ -291,6 +293,22 @@ footer{
 .signIn{
 	margin-right: 1em;
 }
+
+.login_box input[type="text"]{
+	color: #000;
+	display: block;
+}
+.login_box label{
+	display: block;
+}
+.login_box input[type="submit"]{
+	font-weight: 300;
+	background: #fff;
+	margin: 0 ;
+	color: #000;
+	border:1px solid black;
+	padding: .3em .6em;
+}
 /*----------------------- Login End */
 
 /*------------------------------ Contact */
@@ -301,16 +319,45 @@ footer{
 }
 
 
-
-
-
-
-
 /*----------------------- Contact End */
+
+/*------------------------------ Cart */
+
+.main table th{
+	padding: 1em;
+}
+table img{
+	width: 8em;
+}
+td{
+	padding: 0 2em;
+}
+#empty{
+	font-size: 1.3em;
+	color: tomato;
+}
+.total{
+	padding: .4em 1em;
+	font-size: 1.4em;
+	background: #fff;
+	color: #188500;
+	border-radius: 10px;
+	float: right;
+	display: inline-block;
+}
+/*----------------------- Cart End */
 
 
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- Admin Pages */
 
 
-/*------------------------------ A-Home */
+/*------------------------------ Edit_Product */
 
+textarea{
+	resize: none;
+	color: #000;
+	width: 15em;
+	height: 4em
+}
+
+/*----------------------- Edit_Product End */

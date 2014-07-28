@@ -11,18 +11,23 @@
 				<img src="assets/img/uploads/<?=$product['image']?>" alt="">
 			</a>
 
-			<p>
-			<hr>
+			<div class="row">
+				<hr>
 				<?=$product['description']?>
-			</p>
+			</div>
 
 			<div class="row">$<?=$product['price']?></div>
 
 			<div class="buy">
+				<?php if(($_SESSION['logged_in_user'] || $_SESSION['logged_in_admin']) == true): ?>
 				<?=Form::open('add_to_cart.php')?>
-					<?=Form::input('number', 'amount', '1', 'min="1" max="10"')?>
+					<?=Form::hidden('id', $product['id'])?>
+					<?=Form::number('amount', '1', 'min="1" max="10"')?>
 					<?=Form::submit('Add to cart')?>
 				<?=Form::close()?>
+				<?php else: ?>
+					Please login to buy products.
+				<?php endif; ?>
 			</div>
 		</div>
 		<?php endforeach; ?>

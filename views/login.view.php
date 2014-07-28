@@ -10,6 +10,7 @@
 			<div class="row">
 				<?=Form::label('signin_password', 'Password:')?>
 				<?=Form::input('password', 'signin_password')?>
+				<br>
 				<?=Login::display_error()?>
 			</div>
 			<div class="row">
