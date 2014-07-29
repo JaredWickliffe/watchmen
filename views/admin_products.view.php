@@ -1,9 +1,8 @@
 <div class="options">
 	<?php if ($_GET['id']):?>
 		<div class="row">
+			<h3>Category:</h3>
 			<?=Form::open()?>
-
-				<h3>Category:</h3>
 
 				<?=Form::input('text', 'name', ucwords($category->name))?>
 
@@ -32,19 +31,21 @@
 
 			<img src="assets/img/uploads/<?=$product['image']?>" alt="">
 
-			<div class="description">
-				<p><?=$product['description']?></p>
-			</div>
+			<div class="row">
+				<p>
+					<?=$product['description']?>
+				</p>
 
-			<div class="row">$<?=$product['price']?></div>
+				$<?=$product['price']?>
+			</div>
 
 			<div class="edit_button">
 				<a href="edit_product.php?id=<?=$product['id']?>">Edit</a>
 			</div>
-			<div class="edit_button delete">
+
+			<div class="delete edit_button">
 				<a href="delete_product.php?id=<?=$product['id']?>">Delete</a>
 			</div>
-
 		</div>
 	<?php endforeach; ?>
 	

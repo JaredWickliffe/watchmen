@@ -72,6 +72,6 @@ class Login{
 			if ($user->user_save()){
 				self::log_in('user');
 			}
-		}		
+		}	
 	}
 }

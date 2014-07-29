@@ -28,6 +28,20 @@ h1, h2, h3{
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 200;
 }
+input, select, textarea {
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 0.1em;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+
 .label h1{ margin: 0 0 0 2em;}
 
 .row h3{
@@ -40,7 +54,6 @@ h1, h2, h3{
 }
 input[type="text"]{
 	color: #000;
-	float: left;
 	display: inline-block;
 }
 input[type="number"]{
@@ -113,7 +126,11 @@ header{
 	padding: .4em 1.5em;
 	background: #666;
 	cursor: pointer;
-
+}
+.login a:hover{
+	color: #DE8400;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
 }
 .login ul li{
 	display: inline-block;
@@ -138,7 +155,11 @@ header{
 }
 .nav ul li a:hover{
 	font-size: 1.15em;
+	color: #BF7D00;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
 }
+
 
 .container{
 	width: 60%;
@@ -170,7 +191,7 @@ footer{
 	width: 50%;
 	float: left;
 	font-size: 1.1em;
-	padding: 0.5em;
+	padding: 1em;
 	text-align: justify;
 }
 
@@ -218,6 +239,9 @@ footer{
 }
 .description p{
 	margin: 0;
+}
+#c_link{
+	text-decoration: underline;
 }
 /*---------------------- Index End */
 
@@ -316,8 +340,18 @@ footer{
 .contact{
 	width: 100%;
 	background: #ccc;
+	color: #000;
 }
-
+.contact .label h1{
+	margin: 0 2em;
+}
+.contact .label{
+	height: 4em;
+	padding: .5em;
+}
+.contact .row input[type='submit']{
+	border:1px solid #000;
+}
 
 /*----------------------- Contact End */
 
@@ -350,6 +384,56 @@ td{
 
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- Admin Pages */
 
+/*------------------------------ Admin_Header */
+
+.nav input[type="submit"]{
+	margin: 0.5em 0;
+	padding: 0.3em 0.6em;
+}
+
+
+
+/*----------------------- Admin_Header End */
+
+/*------------------------------ Admin_Product */
+.options .row h3{
+	display: block;
+	margin: 0 0 .4em 0;
+}
+form{
+	display: inline-block;
+}
+.options .row input[type="text"]{
+	padding: 0.3em 0.5em;
+	border: none;
+}
+.options .row input[type="submit"]{
+	margin:0 .5em;
+	padding: 0.3em 0.5em;
+	border: none;
+}
+.options .row form .edit_button{
+	padding: 0.3em 0.5em;
+	border: none;
+	margin: 0;
+}
+.options .row .edit_button{
+	padding: 0.3em 0.5em;
+	border: none;
+	margin: .8em 0 .2em;
+}
+.options .products .row{
+	padding: .4em;
+	color: #fff;
+	background: #333;
+}
+.options .products .edit_button{
+	margin: .5em 1em;
+}
+.delete{
+	float: right;
+}
+/*----------------------- Admin_Product End */
 
 /*------------------------------ Edit_Product */
 
@@ -360,4 +444,9 @@ textarea{
 	height: 4em
 }
 
+.add_product .row{
+	margin: 1.5em 0;
+}
+.add_product input[type="text"]{
+}
 /*----------------------- Edit_Product End */

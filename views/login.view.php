@@ -34,6 +34,7 @@
 			<div class="row">
 				<?=Form::label('register_confirm_password', 'Confirm Password: ')?>
 				<?=Form::input('password', 'register_confirm_password')?>
+				
 			</div>
 			
 			<div class="row">
