@@ -9,6 +9,7 @@ require_once '../libraries/collection.class.php';
 require_once '../models/product.model.php';
 require_once '../models/category.model.php';
 
+Login::kickout();
 
 $categories= new Collection('tb_categories');
 $this_category = new Category($_GET['category_id']);
@@ -36,11 +37,11 @@ if($_FILES){
 
 if($_POST['name']){
 	$new_product = new Product();
-	$new_product->name=$_POST['name'];
-	$new_product->description=$_POST['description'];
-	$new_product->price=$_POST['price'];
-	$new_product->image=$output;
-	$new_product->category_id=$_GET['category_id'];
+	$new_product->name 		  =strtolower($_POST['name']);
+	$new_product->description =$_POST['description'];
+	$new_product->price 	  =$_POST['price'];
+	$new_product->image 	  =$output;
+	$new_product->category_id =$_GET['category_id'];
 
 	if($_POST['featured'] != 1){
 		$new_product->featured = 0;

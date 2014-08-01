@@ -12,7 +12,15 @@
 			<h1><a href="index.php">Watchmen</a></h1>
 		</div>
 		<div class="login">
-				<a href="login.php">Login/Register</a>
+			<?php if($_SESSION['logged_in_admin']): ?>
+				<a href="products.php">Products</a>
+			<?php endif; ?>	
+
+			<?php if($_SESSION['logged_in_admin'] || 
+					 $_SESSION['logged_in_user']): ?>
+				<a href="cart.php">Cart(<?=Cart::get_total()?>)</a>
+				<a href="logout.php">Sign Out</a>
+			<?php endif; ?>
 				<a href="contact.php">Contact us</a>
 		</div>
 	</header>
@@ -22,7 +30,9 @@
 			<li><a href="admin_products.php">ALL PRODUCTS</a></li>
 			<?php foreach ($categories->items as $cat): ?>
 				<li>
-					<a href="admin_products.php?id=<?=$cat['id']?>"><?=ucwords($cat['name'])?></a>
+					<a href="admin_products.php?id=<?=$cat['id']?>">
+					<?=ucwords($cat['name'])?>
+					</a>
 				</li>
 			<?php endforeach; ?>
 		<?=Form::open()?>

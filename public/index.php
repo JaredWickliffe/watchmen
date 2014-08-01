@@ -7,9 +7,8 @@ require_once '../libraries/collection.class.php';
 
 $categories= new Collection('tb_categories');
 
-$featured_products = new Collection('tb_products', 'featured', '1');
+$featured_products = new Collection('tb_products', 'featured', '1', $_GET['id']);
 
-$products = new Collection('tb_products', 'category_id', $_GET['id']);
 
 include '../views/header.view.php';
 include '../views/home.view.php';

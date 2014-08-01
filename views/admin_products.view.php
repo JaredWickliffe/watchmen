@@ -31,13 +31,10 @@
 
 			<img src="assets/img/uploads/<?=$product['image']?>" alt="">
 
-			<div class="row">
-				<p>
-					<?=$product['description']?>
-				</p>
-
-				$<?=$product['price']?>
+			<div class="row prod_text over">
+				<?=$product['description']?>
 			</div>
+			<div class="row">$<?=$product['price']?></div>
 
 			<div class="edit_button">
 				<a href="edit_product.php?id=<?=$product['id']?>">Edit</a>

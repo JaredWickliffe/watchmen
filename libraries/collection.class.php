@@ -56,10 +56,15 @@ class Collection{
 	*	
 	*/
 	public function load($field = false, $value = false){
-		$this->db->select('*')->from($this->table)->where('deleted', 0)->order_by('name', 'asc');
+		$this->db
+			 ->select('*')
+			 ->from($this->table)
+			 ->where('deleted', 0)
+			 ->order_by('name', 'asc');
 
 		if($field && $value){
-			$this->db->where_and($field, $value);
+			$this->db
+				 ->where_and($field, $value);
 		}
 
 		$this->items = $this->db->get();

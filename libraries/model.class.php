@@ -6,7 +6,7 @@
 *
 *	@uses Config, for db details. Database, for db connection
 *
-*	@version 1.4
+*	@version 1.5
 *	@author  Nick Sheffield
 *
 */
@@ -60,7 +60,7 @@ class Model{
 	*/
 	function __get($var){
 		if(isset($this->data[$var])){
-			return $this->data[$var];
+			return $this->get_filtered($var);
 		}else{
 			return false;
 		}
@@ -95,6 +95,29 @@ class Model{
 
 	/**
 	*
+	*	Get a value from this model, but strip slashes, and strip most html tags first
+	*
+	*	@param string $var The key of the property to get out of this model
+	*
+	*	@return string The safe, filtered version of the data from the database
+	*
+	*/
+	public function get_filtered($var){
+		if($this->data[$var]){
+
+			$value = $this->data[$var];
+
+			$filtered_value = strip_tags($value, '<p><a><b><i><h1><h2><h3><h4><h5><h6>');
+
+			return $filtered_value;
+
+		}else{
+			return false;
+		}
+	}
+
+	/**
+	*
 	*	Load information from the database table
 	*
 	*	@param  int   $id The value of the id field in the table
@@ -115,13 +138,37 @@ class Model{
 
 	/**
 	*
+	*	Fill the data array of this model. Useful for adding data from $_POST quickly
+	*
+	*	@param  array $data An associative array containing one or more fields => value pairs
+	*
+	*	@return array An associative array containing any data that was rejected
+	*
+	*/
+	public function fill($data){
+
+		$not_added = array();
+
+		foreach($data as $key => $value){
+			if(in_array($key, $this->fields)){
+				$this->data[$key] = $value;
+			}else{
+				$not_added[$key] = $value;
+			}
+		}
+
+		return $not_added;
+	}
+
+	/**
+	*
 	*	Insert or update this record in the table
 	*
 	*	@return boolean Whether the insert/update was successful or not
 	*
 	*/
 	public function save(){
-		
+
 		if(!isset($this->data[$this->primary_key])){
 			$success = $this->db
 				->set($this->data)
@@ -179,7 +226,7 @@ class Model{
 	public function hard_delete(){
 		return $this->db
 			->where($this->primary_key, $this->fields[$this->primary_key])
-			->delete();
+			->delete($this->table);
 	}
 
 }

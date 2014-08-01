@@ -101,7 +101,7 @@ class Form{
 	*	
 	*/
 	public static function textarea($name, $value = ''){
-		$html = "<textarea id='$name' name='$name'>$value</textarea>";
+		$html = "<textarea maxlength='100' id='$name' name='$name'>$value</textarea>";
 		return $html;
 	}
 

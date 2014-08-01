@@ -46,4 +46,5 @@
 	</table>
 	<div class="checkout">
 		<p class="total">Grand Total: $<?=$grand_total?></p>
+	</div>
 </div>

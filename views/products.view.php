@@ -11,8 +11,7 @@
 				<img src="assets/img/uploads/<?=$product['image']?>" alt="">
 			</a>
 
-			<div class="row">
-				<hr>
+			<div class="row prod_text over">
 				<?=$product['description']?>
 			</div>
 
